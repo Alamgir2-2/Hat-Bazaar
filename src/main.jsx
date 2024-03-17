@@ -20,7 +20,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'orders',
-        element: <Orders></Orders>
+        element: <Orders></Orders>,
+        // loader: cartProductsLoader
       },
       {
         path: 'inventory',
