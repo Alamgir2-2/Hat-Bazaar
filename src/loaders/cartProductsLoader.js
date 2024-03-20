@@ -17,8 +17,6 @@ for(const id in storedCart){
     savedCart.push(addedProduct);
   }
 }
-
-  // console.log(products);
   return savedCart;
 }
 
