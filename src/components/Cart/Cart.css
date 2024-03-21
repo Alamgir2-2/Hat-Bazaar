@@ -9,3 +9,12 @@
 .cart p{
   font-size: 17px;
 }
+.btn-clear-cart{
+  width: 90%;
+  margin: 10px auto;
+  background: #ff3030;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
