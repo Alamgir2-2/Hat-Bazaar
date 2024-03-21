@@ -13,3 +13,16 @@
   margin-top: 50px;
   margin-right: 30px;
 }
+.btn-procced{
+  background: #ff9900;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.procced-link{
+  text-decoration: none;
+}
