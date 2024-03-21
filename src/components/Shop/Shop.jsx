@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "../Product/Product";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Cart from "../Cart/Cart";
 import {
   addToDb,
@@ -102,7 +104,7 @@ const Shop = () => {
       <div className="cart-container">
         <Cart cart={cart} hanldeClearCart={hanldeClearCart}>
           <Link className="procced-link" to="/orders">
-            <button className="btn-procced">Review Order</button>
+            <button className="btn-procced"><span>Review Order</span> <FontAwesomeIcon icon={faArrowRight} /></button>
           </Link>
         </Cart>
       </div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Cart from "../Cart/Cart";
 import { Link, useLoaderData } from "react-router-dom";
 import ReviewItem from "../ReviewItem/ReviewItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
 import './orders.css';
 import { deleteShoppingCart, removeFromDb } from "../../../utilities/fakedb";
 
@@ -38,7 +40,7 @@ const Orders = () => {
         cart={cart}
         hanldeClearCart = {hanldeClearCart}>
           <Link className="procced-link" to="/checkout">
-            <button className="btn-procced">Procced Checkout</button>
+            <button  className="btn-procced"><span>Procced Checkout</span> <FontAwesomeIcon icon={faMoneyCheck} /></button>
           </Link>
         </Cart>
       </div>
