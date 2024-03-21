@@ -4,7 +4,7 @@ import "./SignUp.css";
 const SignUp = () => {
   return (
     <div className="form-container">
-      <h2 className="form-title">Login</h2>
+      <h2 className="form-title">Sign Up</h2>
       <form>
         <div className="form-control">
           <label htmlFor="">Email</label>
@@ -21,7 +21,7 @@ const SignUp = () => {
           <input type="password" name="confirm" id="" required />
         </div>
 
-        <input className="btn-submit" type="submit" value="Login" />
+        <input className="btn-submit" type="submit" value="Sign Up" />
       </form>
     </div>
   );
