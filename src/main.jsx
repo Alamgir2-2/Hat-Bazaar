@@ -11,44 +11,47 @@ import Login from "./components/Login/Login.jsx";
 import cartProductsLoader from "./loaders/cartProductsLoader.js";
 import Checkout from "./components/Checkout/Checkout.jsx";
 import SignUp from "./components/SignUp/SignUp.jsx";
+import AuthProvider from "./components/Provider/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    children:[
+    children: [
       {
-        path: '/',
-        element: <Shop></Shop>
+        path: "/",
+        element: <Shop></Shop>,
       },
       {
-        path: 'orders',
+        path: "orders",
         element: <Orders></Orders>,
         // loader: () => fetch('products.json')
-        loader: cartProductsLoader
+        loader: cartProductsLoader,
       },
       {
-        path: 'inventory',
-        element: <Inventory></Inventory>
+        path: "inventory",
+        element: <Inventory></Inventory>,
       },
       {
-        path: 'login',
-        element: <Login></Login>
+        path: "login",
+        element: <Login></Login>,
       },
       {
-        path: 'signup',
-        element: <SignUp></SignUp>
+        path: "signup",
+        element: <SignUp></SignUp>,
       },
       {
-        path: 'checkout',
-        element:<Checkout></Checkout>
-      }
-    ]
+        path: "checkout",
+        element: <Checkout></Checkout>,
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
