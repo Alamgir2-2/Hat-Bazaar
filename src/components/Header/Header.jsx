@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <nav className="header">
@@ -16,7 +24,12 @@ const Header = () => {
         <Link to="/inventory">Inventory</Link>
         <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
-        <Link>{user && <span>Welcome {user.email}</span>}</Link>
+        {user && (
+          <span>
+            Welcome {user.email}{" "}
+            <button onClick={handleLogOut}>Sign Out</button>
+          </span>
+        )}
       </div>
     </nav>
   );
