@@ -12,7 +12,7 @@ const Header = () => {
       .then((result) => {})
       .catch((error) => {
         console.error(error);
-      });
+      });n
   };
 
   return (
